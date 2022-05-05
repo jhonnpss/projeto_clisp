@@ -1,12 +1,42 @@
-    ;;https://www.tutorialspoint.com/lisp/lisp_clos.htm
-	;;https://www.tutorialspoint.com/lisp/lisp_vectors.htm;
-	
+      	
 	(defclass pessoa ()
              ((nome :accessor pessoa-nome)
              (cpf :accessor pessoa-cpf)
              (endereco :accessor pessoa-end)
              )
-    )
+        )
+
+        (defclass produto ()
+		((nome :acessor produto-nome)
+		 (tipo :acessor produto-tipo)
+		 (ano :acessor produto-ano)
+		 (teor_alcolico :acessor produto-teor)
+		 (valor :acessor produto-valor)
+	     )
+	)
+	
+	(defclass funcionario ()
+        ((carteira_trabalho :acessor func-carteira)
+	  (pis :acessor func-pis)
+	 )	
+	)
+	
+	(defclass cliente ()
+	 ((cpf :acessor cliente-cpf)
+	 )
+	)
+	
+	(defclass venda ()
+      ((data :acessor venda-data)
+	   (valor_total :acessor venda-valor)
+	  )	
+	)
+	
+	(defclass comissao ()
+	   ((mes :acessor comissao-mes)
+	    (ano :acessor comessao-ano)
+	   )
+		
 	(defun menu-principal ()
 		(format t "~%~%||||||||||||||||||||||||||||||||||||~%")
 		(format t "---===[Suavinhos]===---~%")
